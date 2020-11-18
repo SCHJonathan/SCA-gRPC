@@ -3,7 +3,7 @@
 > gRPC (gRPC Remote Procedure Calls) is an open source remote procedure call (RPC) system initially developed at Google in 2015. It uses HTTP/2 for transport, Protocol Buffers as the interface description language, and provides features such as authentication, bidirectional streaming and flow control, blocking or nonblocking bindings, and cancellation and timeouts. It generates cross-platform client and server bindings for many languages. Most common usage scenarios include connecting services in microservices style architecture and connect mobile devices, browser clients to backend services.
 > (quoted from [Wikipedia](https://en.wikipedia.org/wiki/GRPC))
 
-Hope this brief quote from [Wikipedia](https://en.wikipedia.org/wiki/GRPC) can give you a quick understanding of this popular framework. It's an RPC Framework carrying HTTP/2 proctol with (even bidirectional) data streaming support. Protocol Buffers play the role of IDL, which means you can write your server completely in `Java` and the client using `C++` can invoke your service functions like it's written in `C++` too. This framework gets increasingly more attention since the past few years and this article will offer you an objective and detailed breakdown of some important parts of this framework.
+Hope this brief quote from [Wikipedia](https://en.wikipedia.org/wiki/GRPC) can give you a quick understanding of this popular framework. It's an RPC Framework carrying HTTP/2 proctol with (even bidirectional) data streaming support. Protocol Buffers play the role of IDL, which means you can write your server completely in `Java` andœ the client using `C++` can invoke your service functions like it's written in `C++` too. This framework gets increasingly more attention since the past few years and this article will offer you an objective and detailed breakdown of some important parts of this framework.
 
 ## Some Nonsenses
 
@@ -13,7 +13,9 @@ During this adventure, we will not just limit our scope within the gRPC project,
 
 ## Adventure Started
 
-### 0. What is the RPC and why is it so important? (Is it better than RESTful APIs?)
+### 0. What is the RPC and why is it so important?
+
+One of the questions you might ask is why do we even consider using RPC rather than API for the communication between processes or services because API also allow connect different services with different programming languages and dependencies with uniform and lightweight(maybe) proctol.  
 
 Let's first read the definition of RPC from wikipedia.
 
